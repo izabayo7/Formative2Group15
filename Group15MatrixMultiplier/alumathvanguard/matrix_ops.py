@@ -61,6 +61,12 @@ class MatrixMultiplier:
     
     # Funny error messages for each group member
     ERROR_MESSAGES = {
+        "cedric": [
+            "Cedric can't allow you to do that because he's too busy debugging his own code to fix your matrix dimensions!",
+            "Cedric says: 'Nope! These matrices are more incompatible than Windows and stability.'",
+            "Cedric is blocking this operation because he knows it'll crash harder than his laptop during finals week!",
+            "Cedric refuses because he's seen enough mathematical disasters for one lifetime!"
+        ],
         "edith": [
             "Edith (the group leader) can't permit this because she has standards, and your matrices don't meet them!",
             "Edith says: 'As group leader, I hereby veto this mathematical catastrophe!'",
