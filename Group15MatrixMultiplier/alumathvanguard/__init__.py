@@ -11,10 +11,10 @@ Authors:
 Version: 1.0.0
 """
 
-from .matrix_ops import Matrix, create_matrix
+from .matrix_ops import MatrixMultiplier, Matrix, multiply_matrices, create_matrix
 
 __version__ = "1.0.0"
 __author__ = "ALU Math Vanguard Group 15"
 
 # Make key classes available at package level
-__all__ = ['Matrix', 'create_matrix']
+__all__ = ['MatrixMultiplier', 'Matrix', 'multiply_matrices', 'create_matrix']
