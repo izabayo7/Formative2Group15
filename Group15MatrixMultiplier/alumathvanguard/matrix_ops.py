@@ -73,6 +73,12 @@ class MatrixMultiplier:
             "Ntwali is blocking this operation because he values his mathematical sanity!",
             "Ntwali refuses because he's already traumatized by enough matrix errors this semester!"
         ],
+        "samuel": [
+            "Samuel can't let you do that because he's seen what happens when dimensions don't match - chaos!",
+            "Samuel says: 'These matrices are more misaligned than my sleep schedule during exam week!'",
+            "Samuel is preventing this because he believes in mathematical harmony, not dimension discord!",
+            "Samuel declares: 'I'd rather debug recursive functions than deal with these incompatible matrices!'"
+        ]
     }
     
     @staticmethod
@@ -153,6 +159,35 @@ class MatrixMultiplier:
             
         return matrix1.cols == matrix2.rows
     
+    @staticmethod
+    def get_result_dimensions(matrix1: Union[Matrix, List[List]], matrix2: Union[Matrix, List[List]]) -> tuple:
+        """
+        Get the dimensions of the result matrix if multiplication is possible.
+        
+        Args:
+            matrix1: First matrix
+            matrix2: Second matrix
+            
+        Returns:
+            tuple: (rows, cols) of result matrix
+            
+        Raises:
+            MatrixMultiplicationError: If matrices can't be multiplied
+        """
+        if not isinstance(matrix1, Matrix):
+            matrix1 = Matrix(matrix1)
+        if not isinstance(matrix2, Matrix):
+            matrix2 = Matrix(matrix2)
+        
+        if not MatrixMultiplier.can_multiply(matrix1, matrix2):
+            funny_error = MatrixMultiplier._get_funny_error(
+                matrix1.get_dimensions(), 
+                matrix2.get_dimensions()
+            )
+            raise MatrixMultiplicationError(funny_error, "dimension_mismatch")
+        
+        return (matrix1.rows, matrix2.cols)
+
 
 # Convenience functions for easy access
 def multiply_matrices(matrix1, matrix2):
