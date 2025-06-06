@@ -66,7 +66,13 @@ class MatrixMultiplier:
             "Edith says: 'As group leader, I hereby veto this mathematical catastrophe!'",
             "Edith is stopping you because she's responsible for everyone's grades and this ain't it, chief!",
             "Edith declares: 'My leadership skills include preventing linear algebra disasters like this one!'"
-        ]
+        ],
+        "ntwali": [
+            "Ntwali can't allow this because he's too busy solving actual solvable problems!",
+            "Ntwali says: 'Even my calculator is laughing at these dimension mismatches!'",
+            "Ntwali is blocking this operation because he values his mathematical sanity!",
+            "Ntwali refuses because he's already traumatized by enough matrix errors this semester!"
+        ],
     }
     
     @staticmethod
@@ -127,6 +133,25 @@ class MatrixMultiplier:
                     result[i][j] += matrix1.data[i][k] * matrix2.data[k][j]
         
         return Matrix(result)
+    
+    @staticmethod
+    def can_multiply(matrix1: Union[Matrix, List[List]], matrix2: Union[Matrix, List[List]]) -> bool:
+        """
+        Check if two matrices can be multiplied.
+        
+        Args:
+            matrix1: First matrix
+            matrix2: Second matrix
+            
+        Returns:
+            bool: True if matrices can be multiplied, False otherwise
+        """
+        if not isinstance(matrix1, Matrix):
+            matrix1 = Matrix(matrix1)
+        if not isinstance(matrix2, Matrix):
+            matrix2 = Matrix(matrix2)
+            
+        return matrix1.cols == matrix2.rows
     
 
 # Convenience functions for easy access
