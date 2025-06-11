@@ -21,11 +21,11 @@ project-root/
 │   └── matrix.py         # Custom matrix multiplication logic
 │
 ├── pca/
-│   ├── african_dataset.csv  # African dataset used in PCA
-│   └── pca_analysis.py      # PCA implementation and visualization
+│   ├── Africa_1997-2020_Jan08.csv  # African dataset used in PCA
+│   └── Template_PCA_Formative_1[15].ipynb      # PCA implementation and visualization
 │
 ├── eigen/
-│   └── eigen_calc.pdf     # Manual computation of eigenvalues/vectors
+│   └── eigen_calc.pdf     # Handwritten work of eigenvalues&vectors
 │
 └── README.md             # Project documentation
 ```
@@ -33,8 +33,6 @@ project-root/
 ---
 
 ## Phase 1: Matrix Multiplication Library
-
-### Module: `group15multiplyingmatrices`
 
 This custom library implements basic matrix multiplication without using external libraries like NumPy.
 
@@ -60,8 +58,6 @@ print(result)
 
 ##  Phase 2: Principal Component Analysis (PCA)
 
-###  Module: `pca/pca_analysis.py`
-
 PCA is implemented to analyze and reduce dimensionality of a real-world African dataset.
 
 **Key Steps:**
@@ -76,44 +72,13 @@ PCA is implemented to analyze and reduce dimensionality of a real-world African 
 
 * `pandas`, `numpy`, `matplotlib`, `seaborn`
 
-**Run:**
-
-```bash
-python pca/pca_analysis.py
-```
-
-> 📌 Dataset: A CSV file containing socio-economic indicators across African countries.
+> 📌 Dataset: A CSV file containing Africanized data.
 
 ---
 
-## Phase 3: Eigenvalue and Eigenvector Computation
+## Phase 3: Eigenvalue and Eigenvector Work
 
-###  Module: `eigen/eigen_calc.py`
-
-Eigenvalues and eigenvectors are computed manually from the covariance matrix to demonstrate understanding beyond library usage.
-
-**Methods Include:**
-
-* Characteristic polynomial generation
-* Solving polynomial for eigenvalues
-* Finding eigenvectors by solving `(A - λI)v = 0`
-
-**Note:** While `numpy.linalg` is used for verification, all core steps are computed manually.
-
----
-
-##  Requirements
-
-Install dependencies with:
-
-```bash
-pip install alumathvanguard
-```
-
-
----
-
-
+Handwritten eigenvalues and eigenvectors calculation.
 
 ## Contributors
 
